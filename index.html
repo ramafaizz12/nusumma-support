@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nusumma Mobile – Support</title>
+<meta name="description" content="Support and contact information for the Nusumma Mobile app.">
+<style>
+  /* ===== EDIT YOUR DETAILS IN THE SCRIPT AT THE BOTTOM OF THIS FILE ===== */
+  :root {
+    --bg: #f6f7f9;
+    --card: #ffffff;
+    --text: #1d2330;
+    --muted: #5b6475;
+    --accent: #1f5fbf;
+    --accent-soft: #e8f0fb;
+    --border: #e3e6eb;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+  .top {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 0; gap: 12px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .logo {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--accent); color: #fff;
+    display: grid; place-items: center; font-weight: 700; font-size: 20px;
+  }
+  .brand h1 { font-size: 18px; margin: 0; }
+  .brand p { font-size: 13px; margin: 0; color: var(--muted); }
+  .lang button {
+    border: 1px solid var(--border); background: var(--card); color: var(--muted);
+    padding: 6px 12px; font-size: 13px; cursor: pointer;
+  }
+  .lang button:first-child { border-radius: 8px 0 0 8px; }
+  .lang button:last-child { border-radius: 0 8px 8px 0; border-left: none; }
+  .lang button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  main { padding: 32px 0 48px; }
+  .hero h2 { font-size: 28px; margin: 0 0 8px; }
+  .hero p { color: var(--muted); margin: 0 0 28px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 24px; margin-bottom: 20px;
+  }
+  .card h3 { margin: 0 0 12px; font-size: 18px; }
+  .contact-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 12px 0; border-top: 1px solid var(--border);
+  }
+  .contact-row:first-of-type { border-top: none; padding-top: 0; }
+  .contact-row .label { font-size: 13px; color: var(--muted); }
+  .contact-row a { color: var(--accent); font-weight: 600; text-decoration: none; word-break: break-all; }
+  .contact-row a:hover { text-decoration: underline; }
+  .icon {
+    flex: 0 0 36px; height: 36px; border-radius: 8px;
+    background: var(--accent-soft); color: var(--accent);
+    display: grid; place-items: center; font-size: 16px;
+  }
+  details { border-top: 1px solid var(--border); padding: 14px 0; }
+  details:first-of-type { border-top: none; padding-top: 0; }
+  summary { cursor: pointer; font-weight: 600; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; float: right; color: var(--muted); font-weight: 400; }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 10px 0 0; color: var(--muted); }
+  footer { text-align: center; font-size: 13px; color: var(--muted); padding-bottom: 32px; }
+  [data-lang] { display: none; }
+  body.en [data-lang="en"], body.id [data-lang="id"] { display: revert; }
+</style>
+</head>
+<body class="en">
+
+<header>
+  <div class="wrap top">
+    <div class="brand">
+      <div class="logo">N</div>
+      <div>
+        <h1>Nusumma Mobile</h1>
+        <p data-lang="en">Help &amp; Support</p>
+        <p data-lang="id">Bantuan &amp; Dukungan</p>
+      </div>
+    </div>
+    <div class="lang">
+      <button id="btn-en" class="active" onclick="setLang('en')">EN</button>
+      <button id="btn-id" onclick="setLang('id')">ID</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h2 data-lang="en">How can we help?</h2>
+    <h2 data-lang="id">Ada yang bisa kami bantu?</h2>
+    <p data-lang="en">Find answers to common questions about Nusumma Mobile, or contact our support team directly.</p>
+    <p data-lang="id">Temukan jawaban atas pertanyaan umum seputar Nusumma Mobile, atau hubungi tim dukungan kami secara langsung.</p>
+  </section>
+
+  <section class="card">
+    <h3 data-lang="en">Contact us</h3>
+    <h3 data-lang="id">Hubungi kami</h3>
+
+    <div class="contact-row">
+      <div class="icon">✉</div>
+      <div>
+        <div class="label" data-lang="en">Email</div>
+        <div class="label" data-lang="id">Email</div>
+        <a class="js-email" href="#"></a>
+      </div>
+    </div>
+
+    <div class="contact-row js-phone-row">
+      <div class="icon">☎</div>
+      <div>
+        <div class="label" data-lang="en">Phone / WhatsApp</div>
+        <div class="label" data-lang="id">Telepon / WhatsApp</div>
+        <a class="js-phone" href="#"></a>
+      </div>
+    </div>
+
+    <div class="contact-row">
+      <div class="icon">⏱</div>
+      <div>
+        <div class="label" data-lang="en">Support hours</div>
+        <div class="label" data-lang="id">Jam layanan</div>
+        <span class="js-hours"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3 data-lang="en">Frequently asked questions</h3>
+    <h3 data-lang="id">Pertanyaan yang sering diajukan</h3>
+
+    <!-- English FAQ -->
+    <div data-lang="en">
+      <details>
+        <summary>How do I sign in?</summary>
+        <p>Nusumma Mobile uses your work or company account. Sign in with the credentials provided by your organization. You cannot create a new account inside the app.</p>
+      </details>
+      <details>
+        <summary>I forgot my password or cannot log in.</summary>
+        <p>Your account is managed by your organization. Please contact your company administrator to reset your password, or email our support team and include your company name.</p>
+      </details>
+      <details>
+        <summary>Why does the app ask for my location?</summary>
+        <p>Location is used to support app features and to help keep your account secure. Location access is optional. You can turn it off at any time in your device Settings, although some features may not work without it.</p>
+      </details>
+      <details>
+        <summary>Why does the app ask for access to my contacts?</summary>
+        <p>Contacts access is needed for core features of the app. Your contacts are used only for that purpose and are not sold or shared with third parties.</p>
+      </details>
+      <details>
+        <summary>Is my data secure?</summary>
+        <p>All data sent between the app and our servers is encrypted in transit. We do not sell your data or use it for advertising.</p>
+      </details>
+      <details>
+        <summary>How do I delete my account or data?</summary>
+        <p>Accounts are created and managed by your organization. To remove your account, contact your company administrator or email our support team.</p>
+      </details>
+      <details>
+        <summary>The app is not working correctly. What should I do?</summary>
+        <p>Make sure you have the latest version of Nusumma Mobile installed and a stable internet connection. If the problem continues, email us with your device model, OS version, and a short description or screenshot of the issue.</p>
+      </details>
+    </div>
+
+    <!-- Indonesian FAQ -->
+    <div data-lang="id">
+      <details>
+        <summary>Bagaimana cara masuk ke aplikasi?</summary>
+        <p>Nusumma Mobile menggunakan akun kerja atau akun perusahaan Anda. Masuk dengan kredensial yang diberikan oleh organisasi Anda. Akun baru tidak dapat dibuat di dalam aplikasi.</p>
+      </details>
+      <details>
+        <summary>Saya lupa kata sandi atau tidak bisa masuk.</summary>
+        <p>Akun Anda dikelola oleh organisasi Anda. Silakan hubungi administrator perusahaan Anda untuk mengatur ulang kata sandi, atau kirim email ke tim dukungan kami dengan menyertakan nama perusahaan Anda.</p>
+      </details>
+      <details>
+        <summary>Mengapa aplikasi meminta akses lokasi?</summary>
+        <p>Lokasi digunakan untuk mendukung fitur aplikasi dan membantu menjaga keamanan akun Anda. Akses lokasi bersifat opsional. Anda dapat menonaktifkannya kapan saja di Pengaturan perangkat, meskipun beberapa fitur mungkin tidak berfungsi tanpanya.</p>
+      </details>
+      <details>
+        <summary>Mengapa aplikasi meminta akses ke kontak?</summary>
+        <p>Akses kontak diperlukan untuk fitur utama aplikasi. Kontak Anda hanya digunakan untuk keperluan tersebut dan tidak dijual atau dibagikan kepada pihak ketiga.</p>
+      </details>
+      <details>
+        <summary>Apakah data saya aman?</summary>
+        <p>Semua data yang dikirim antara aplikasi dan server kami dienkripsi selama pengiriman. Kami tidak menjual data Anda atau menggunakannya untuk iklan.</p>
+      </details>
+      <details>
+        <summary>Bagaimana cara menghapus akun atau data saya?</summary>
+        <p>Akun dibuat dan dikelola oleh organisasi Anda. Untuk menghapus akun, hubungi administrator perusahaan Anda atau kirim email ke tim dukungan kami.</p>
+      </details>
+      <details>
+        <summary>Aplikasi tidak berfungsi dengan baik. Apa yang harus saya lakukan?</summary>
+        <p>Pastikan Anda menggunakan versi terbaru Nusumma Mobile dan koneksi internet yang stabil. Jika masalah berlanjut, kirim email kepada kami dengan menyertakan model perangkat, versi OS, serta deskripsi singkat atau tangkapan layar masalahnya.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span class="js-year"></span> <span class="js-company"></span>. <span data-lang="en">All rights reserved.</span><span data-lang="id">Hak cipta dilindungi.</span>
+</footer>
+
+<script>
+  // ============================================================
+  //  EDIT THESE DETAILS BEFORE YOU PUBLISH
+  // ============================================================
+  const SUPPORT = {
+    email:   "ramafais12@gmail.com", // required
+    phone:   "+6281342073769",                                   // optional, e.g. "+62 812 3456 7890" — leave "" to hide
+    hours:   "Monday–Friday, 09:00–17:00 WIB",
+    company: "Bank Nusumma"
+  };
+  // ============================================================
+
+  const emailEl = document.querySelector(".js-email");
+  emailEl.textContent = SUPPORT.email;
+  emailEl.href = "mailto:" + SUPPORT.email + "?subject=Nusumma%20Mobile%20Support";
+
+  if (SUPPORT.phone) {
+    const phoneEl = document.querySelector(".js-phone");
+    phoneEl.textContent = SUPPORT.phone;
+    phoneEl.href = "https://wa.me/" + SUPPORT.phone.replace(/[^0-9]/g, "");
+  } else {
+    document.querySelector(".js-phone-row").style.display = "none";
+  }
+
+  document.querySelector(".js-hours").textContent = SUPPORT.hours;
+  document.querySelector(".js-company").textContent = SUPPORT.company;
+  document.querySelector(".js-year").textContent = new Date().getFullYear();
+
+  function setLang(lang) {
+    document.body.className = lang;
+    document.documentElement.lang = lang;
+    document.getElementById("btn-en").classList.toggle("active", lang === "en");
+    document.getElementById("btn-id").classList.toggle("active", lang === "id");
+  }
+</script>
+</body>
+</html>
